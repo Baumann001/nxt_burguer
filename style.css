@@ -1,0 +1,180 @@
+body{
+background-color: #3a2920;
+color: aliceblue;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#texto-central{
+justify-content: center;
+display: flex;
+}
+nav {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    justify-content: center;
+}
+
+
+nav ul li a {
+    color: #C0C0C0; /* Silver */
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #c9c500; /* Mercedes red underline */
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #ebb812; /* Mercedes red */
+    text-shadow: 0 0 10px #ebb812;
+}
+
+#coloracao{
+ color:#c4a57b;
+}
+
+
+.btn-cardapio {
+    background: #721817;
+    color: #f5f5dc;
+
+    padding: 16px 32px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: 600;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-cardapio:hover {
+    background: #8b2524;
+}
+
+
+.adorar-title{
+justify-content: center;
+display: flex;
+}
+
+.hero {
+    min-height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+/* CONTAINER */
+
+.hero-container {
+    max-width: 800px;
+}
+
+/* TÍTULO */
+
+.hero-title {
+    color: #f5f5dc;
+
+    font-size: 3rem;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+/* SUBTÍTULO */
+
+.hero-text {
+    color: #c4a57b;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 35px;
+}
+
+/* BOTÃO */
+
+.hero-button {
+    background-color: #721817;
+    color: #f5f5dc;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 16px 32px;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #8b2524;
+}
+
+/* RESPONSIVO */
+
+@media (min-width: 768px) {
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .hero-text {
+        font-size: 1.5rem;
+    }
+
+  
+
+
+    .adorar-title {
+        font-size: 4.5rem;
+    }
+
+    .adorar-title{
+        font-size: 1.5rem;
+    }
+
+
+}
