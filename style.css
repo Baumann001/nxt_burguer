@@ -8,4 +8,11 @@ color: aliceblue;
 justify-content: center;
 display: flex;
 
+nav {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
