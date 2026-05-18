@@ -7,7 +7,7 @@ color: aliceblue;
 #texto-central{
 justify-content: center;
 display: flex;
-
+}
 nav {
     width: 90%;
     max-width: 1100px;
