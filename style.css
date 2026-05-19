@@ -5,6 +5,8 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 
+
+
 #texto-central{
 justify-content: center;
 display: flex;
@@ -90,6 +92,7 @@ nav ul li a:hover {
 justify-content: center;
 display: flex;
 }
+
 
 .hero {
     
@@ -347,4 +350,147 @@ display: flex;
 .btn-voltar:hover {
    background-color: #8b2524;
   color: #c4a57b;
+}
+
+
+.principal-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+
+  gap: 50px;
+  
+}
+
+.principal-card {
+  background: #2a1b10;
+
+  padding: 10px;
+
+  border-radius: 14px;
+
+  text-align: center;
+}
+
+.principal-image {
+  width: 100%;
+  height: 120px;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  background: #3d2817;
+}
+
+.principal-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.3s;
+}
+
+.principal-image:hover img {
+  transform: scale(1.05)
+}
+
+.principal-card h3 {
+  color: #f5f5dc;
+
+  margin-top: 10px;
+
+  font-size: 14px;
+}
+
+.principal-card {
+  width: 220px;
+
+  background: #2b180d;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid #4a2b16;
+}
+
+.principal-image {
+  width: 100%;
+  height: 180px;
+
+  background: #3d2817;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.principal-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.principal-info {
+  padding: 16px;
+}
+
+.principal-info h3 {
+  color: #f5f5dc;
+
+  font-size: 20px;
+
+  margin-bottom: 10px;
+}
+
+.principal-info p {
+  color: #c79b63;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  margin-bottom: 18px;
+}
+
+.principal-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.principal-footer span {
+  color: #d62828;
+
+  font-size: 28px;
+
+  font-weight: bold;
+}
+
+.principal-footer button {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #8b1e12;
+
+  color: white;
+
+  font-size: 26px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.principal-footer button:hover {
+  transform: scale(1.08);
 }
