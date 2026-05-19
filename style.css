@@ -364,7 +364,7 @@ display: flex;
 
 .principal-card {
   background: #2a1b10;
-
+justify-content: center;
   padding: 10px;
 
   border-radius: 14px;
@@ -405,8 +405,9 @@ display: flex;
 }
 
 .principal-card {
-  width: 220px;
-
+  width: 300px;
+  justify-content: center;
+margin-left: 30px;
   background: #2b180d;
 
   border-radius: 18px;
@@ -491,6 +492,6 @@ display: flex;
   transition: 0.3s;
 }
 
-.principal-footer button:hover {
+.-foote button:hover {
   transform: scale(1.08);
 }
