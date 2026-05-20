@@ -7,15 +7,7 @@
     box-sizing: border-box; /* Garante que paddings não estiquem a largura total */
 }
 
-html, body {
-    width: 100%;
-    max-width: 100%;
-    background-color: white;
-    color: aliceblue;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden; /* Trava absoluta contra zoom e rolagem lateral */
-    -webkit-text-size-adjust: 100%; /* Impede o iOS de avacalhar o tamanho da fonte */
-}
+
 
 #texto-central {
     display: flex;
@@ -391,7 +383,7 @@ nav ul li a:hover {
 html, body {
     width: 100%;
     max-width: 100%;
-    background-color: #3a2920;
+    background-color: white;
     color: aliceblue;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden; /* Trava absoluta contra zoom e rolagem lateral */
