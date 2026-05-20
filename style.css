@@ -157,7 +157,7 @@ nav ul li a:hover {
     background: #2b180d;
     border-radius: 18px;
     overflow: hidden;
-    border: 1px solid #4a2b16;
+    border: 5px solid #4a2b16;
 }
 
 .product-image {
@@ -538,7 +538,7 @@ nav ul li a:hover {
     background: #2b180d;
     border-radius: 18px;
     overflow: hidden;
-    border: 1px solid #4a2b16;
+    border: 1px solid #000000;
 }
 
 .product-image {
