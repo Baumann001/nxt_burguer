@@ -12,7 +12,7 @@ body {
     width: 100%;
     max-width: 100%;
     background-color: white;
-    color: aliceblue;
+    
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
@@ -97,7 +97,7 @@ nav ul li a:hover {
 }
 
 .hero-title {
-    color: #f5f5dc;
+    color: #000000;
     font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -105,7 +105,7 @@ nav ul li a:hover {
 }
 
 .hero-text {
-    color: #c4a57b;
+    color: #d37f08;
     font-size: 1.1rem;
     margin-bottom: 35px;
     line-height: 1.4;
