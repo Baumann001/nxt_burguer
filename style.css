@@ -4,390 +4,18 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que paddings não estiquem a largura total */
+    box-sizing: border-box;
 }
 
-
-
-#texto-central {
-    display: flex;
-    justify-content: center;
-}
-
-#coloracao {
-    color: #c4a57b;
-}
-
-/* ==========================================================================
-   2. NAVEGAÇÃO (HEADER)
-   ========================================================================== */
-nav {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin-left: 1.5rem;
-}
-
-nav ul li a {
-    color: #C0C0C0; /* Silver */
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-nav ul li a::before {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #c9c500; 
-    transition: width 0.3s ease;
-}
-
-nav ul li a:hover::before {
-    width: 100%;
-}
-
-nav ul li a:hover {
-    color: #ebb812; 
-    text-shadow: 0 0 10px #ebb812;
-}
-
-/* ==========================================================================
-   3. SEÇÃO HERO (DO TOPO)
-   ========================================================================== */
-.hero {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-    width: 100%;
-}
-
-.hero-container {
-    width: 100%;
-    max-width: 800px;
-}
-
-.hero-title {
-    color:black;
-    font-size: 2.2rem; /* Tamanho seguro para telas de celular */
-    font-weight: bold;
-    margin-bottom: 20px;
-    word-wrap: break-word; /* Força quebra de palavras longas se necessário */
-}
-
-.hero-text {
-    color: #c4a57b;
-    font-size: 1.1rem;
-    margin-bottom: 35px;
-    line-height: 1.4;
-}
-
-.hero-button {
-    background-color: #721817;
-    color: #f5f5dc;
-    border: none;
-    border-radius: 10px;
-    padding: 16px 32px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.hero-button:hover {
-    background-color: #8b2524;
-}
-
-/* Título secundário "Você vai adorar" */
-.adorar-title {
-    display: flex;
-    justify-content: center;
-    color: #f5f5dc;
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin: 30px 0 10px 0;
-    text-align: center;
-}
-
-/* ==========================================================================
-   4. GRID E CARDS DE PRODUTOS (Geral/Cardápio)
-   ========================================================================== */
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsivo automático */
-    gap: 30px;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.product-card {
-    width: 100%; /* Preenche o espaço do grid de forma fluida */
-    max-width: 280px;
-    margin: 0 auto;
-    background: #2b180d;
-    border-radius: 18px;
-    overflow: hidden;
-    border: 5px solid #4a2b16;
-}
-
-.product-image {
-    width: 100%;
-    height: 180px;
-    background: #3d2817;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.product-image:hover img {
-    transform: scale(1.05);
-}
-
-.product-info {
-    padding: 16px;
-    text-align: left;
-}
-
-.product-info h3 {
-    color: #f5f5dc;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.product-info p {
-    color: #c79b63;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 18px;
-}
-
-.product-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.product-footer span {
-    color: #d62828;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.product-footer button {
-    width: 42px;
-    height: 42px;
-    border: none;
-    border-radius: 12px;
-    background: #8b1e12;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.product-footer button:hover {
-    transform: scale(1.08);
-}
-
-/* ==========================================================================
-   5. GRID E CARDS PRINCIPAIS (Destaques da Home)
-   ========================================================================== */
-.principal-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Permite quebrar linha no mobile */
-    gap: 30px;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto; 
-}
-
-.principal-card {
-    width: 300px;
-    max-width: 100%; /* Impede o card de ser maior que a tela em aparelhos pequenos */
-    background: #2b180d;
-    border-radius: 18px;
-    overflow: hidden;
-    border: 1px solid #4a2b16;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    /* margin-left fixo removido para evitar vazamento lateral */
-}
-
-.principal-image {
-    width: 100%;
-    height: 180px;
-    background: #3d2817;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.principal-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.principal-image:hover img {
-    transform: scale(1.05);
-}
-
-.principal-info {
-    padding: 16px;
-}
-
-.principal-info h3 {
-    color: #f5f5dc;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.principal-info p {
-    color: #c79b63;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 18px;
-}
-
-.principal-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.principal-footer span {
-    color: #d62828;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.principal-footer button {
-    width: 42px;
-    height: 42px;
-    border: none;
-    border-radius: 12px;
-    background: #8b1e12;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.principal-footer button:hover {
-    transform: scale(1.08);
-}
-
-/* ==========================================================================
-   6. BOTÕES AUXILIARES E LINKS
-   ========================================================================== */
-.btn-cardapio {
-    background: #721817;
-    color: #f5f5dc;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn-cardapio:hover {
-    background: #8b2524;
-}
-
-.topo {
-    color: #f5f5dc;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.topo a:hover {
-    color: #c4a57b;
-}
-
-.btn-voltar {
-    color: #f5f5dc;
-    text-decoration: none;
-    font-size: 16px;
-    background-color: #721817;
-    padding: 8px 16px;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn-voltar:hover {
-    background-color: #8b2524;
-    color: #c4a57b;
-}
-
-/* ==========================================================================
-   7. REGRAS PARA TELAS MAIORES (DESKTOP E TABLETS)
-   ========================================================================== */
-@media (min-width: 768px) {
-    .hero-title {
-        font-size: 4.5rem; /* Fica grande e imponente em telas maiores */
-    }
-
-    .hero-text {
-        font-size: 1.5rem;
-    }
-
-    .adorar-title {
-        font-size: 2.8rem;
-    }
-}/* ==========================================================================
-   1. CONFIGURAÇÕES GERAIS E RESETS
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Garante que paddings não estiquem a largura total */
-}
-
-html, body {
+html,
+body {
     width: 100%;
     max-width: 100%;
     background-color: white;
     color: aliceblue;
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden; /* Trava absoluta contra zoom e rolagem lateral */
-    -webkit-text-size-adjust: 100%; /* Impede o iOS de avacalhar o tamanho da fonte */
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
 }
 
 #texto-central {
@@ -423,7 +51,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #C0C0C0; /* Silver */
+    color: #c0c0c0;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -431,13 +59,13 @@ nav ul li a {
 }
 
 nav ul li a::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -5px;
     left: 0;
     width: 0;
     height: 2px;
-    background: #c9c500; 
+    background: #c9c500;
     transition: width 0.3s ease;
 }
 
@@ -446,16 +74,16 @@ nav ul li a:hover::before {
 }
 
 nav ul li a:hover {
-    color: #ebb812; 
+    color: #ebb812;
     text-shadow: 0 0 10px #ebb812;
 }
 
 /* ==========================================================================
-   3. SEÇÃO HERO (DO TOPO)
+   3. HERO
    ========================================================================== */
 .hero {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -470,10 +98,10 @@ nav ul li a:hover {
 
 .hero-title {
     color: #f5f5dc;
-    font-size: 2.2rem; /* Tamanho seguro para telas de celular */
+    font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 20px;
-    word-wrap: break-word; /* Força quebra de palavras longas se necessário */
+    word-wrap: break-word;
 }
 
 .hero-text {
@@ -483,7 +111,8 @@ nav ul li a:hover {
     line-height: 1.4;
 }
 
-.hero-button {
+.hero-button,
+.btn-cardapio {
     background-color: #721817;
     color: #f5f5dc;
     border: none;
@@ -495,136 +124,72 @@ nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.hero-button:hover {
+.hero-button:hover,
+.btn-cardapio:hover {
     background-color: #8b2524;
 }
 
-/* Título secundário "Você vai adorar" */
 .adorar-title {
     display: flex;
     justify-content: center;
+    text-align: center;
     color: #f5f5dc;
     font-size: 1.8rem;
     font-weight: bold;
-    margin: 30px 0 10px 0;
-    text-align: center;
+    margin: 30px 0 10px;
 }
 
 /* ==========================================================================
-   4. GRID E CARDS DE PRODUTOS (Geral/Cardápio)
+   4. GRID DE PRODUTOS
    ========================================================================== */
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsivo automático */
-    gap: 30px;
-    padding: 20px;
+.products-grid,
+.principal-grid {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
+    gap: 30px;
 }
 
-.product-card {
-    width: 100%; /* Preenche o espaço do grid de forma fluida */
-    max-width: 280px;
-    margin: 0 auto;
-    background: #2b180d;
-    border-radius: 18px;
-    overflow: hidden;
-    border: 1px solid #000000;
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.product-image {
-    width: 100%;
-    height: 180px;
-    background: #3d2817;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.product-image:hover img {
-    transform: scale(1.05);
-}
-
-.product-info {
-    padding: 16px;
-    text-align: left;
-}
-
-.product-info h3 {
-    color: #f5f5dc;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.product-info p {
-    color: #c79b63;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 18px;
-}
-
-.product-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.product-footer span {
-    color: #d62828;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.product-footer button {
-    width: 42px;
-    height: 42px;
-    border: none;
-    border-radius: 12px;
-    background: #8b1e12;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.product-footer button:hover {
-    transform: scale(1.08);
-}
-
-/* ==========================================================================
-   5. GRID E CARDS PRINCIPAIS (Destaques da Home)
-   ========================================================================== */
 .principal-grid {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite quebrar linha no mobile */
-    gap: 30px;
-    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   5. CARDS
+   ========================================================================== */
+.product-card,
+.principal-card {
+    background: #2b180d;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.product-card {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto; 
+    max-width: 280px;
+    margin: 0 auto;
+    border: 1px solid #000;
 }
 
 .principal-card {
     width: 300px;
-    max-width: 100%; /* Impede o card de ser maior que a tela em aparelhos pequenos */
-    background: #2b180d;
-    border-radius: 18px;
-    overflow: hidden;
+    max-width: 100%;
     border: 1px solid #4a2b16;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    /* margin-left fixo removido para evitar vazamento lateral */
 }
 
+/* ==========================================================================
+   6. IMAGENS DOS CARDS
+   ========================================================================== */
+.product-image,
 .principal-image {
     width: 100%;
     height: 180px;
@@ -635,6 +200,7 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
+.product-image img,
 .principal-image img {
     width: 100%;
     height: 100%;
@@ -642,20 +208,27 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
 }
 
+.product-image:hover img,
 .principal-image:hover img {
     transform: scale(1.05);
 }
 
+/* ==========================================================================
+   7. INFORMAÇÕES DOS CARDS
+   ========================================================================== */
+.product-info,
 .principal-info {
     padding: 16px;
 }
 
+.product-info h3,
 .principal-info h3 {
     color: #f5f5dc;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
+.product-info p,
 .principal-info p {
     color: #c79b63;
     font-size: 14px;
@@ -663,18 +236,24 @@ nav ul li a:hover {
     margin-bottom: 18px;
 }
 
+/* ==========================================================================
+   8. FOOTER DOS CARDS
+   ========================================================================== */
+.product-footer,
 .principal-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.product-footer span,
 .principal-footer span {
     color: #d62828;
     font-size: 24px;
     font-weight: bold;
 }
 
+.product-footer button,
 .principal-footer button {
     width: 42px;
     height: 42px;
@@ -687,27 +266,14 @@ nav ul li a:hover {
     transition: transform 0.3s;
 }
 
+.product-footer button:hover,
 .principal-footer button:hover {
     transform: scale(1.08);
 }
 
-/*estlização cardapio */
-.btn-cardapio {
-    background: #721817;
-    color: #f5f5dc;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn-cardapio:hover {
-    background: #8b2524;
-}
-
+/* ==========================================================================
+   9. LINKS E BOTÕES AUXILIARES
+   ========================================================================== */
 .topo {
     color: #f5f5dc;
     text-decoration: none;
@@ -728,6 +294,7 @@ nav ul li a:hover {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    transition: 0.3s;
 }
 
 .btn-voltar:hover {
@@ -735,6 +302,9 @@ nav ul li a:hover {
     color: #c4a57b;
 }
 
+/* ==========================================================================
+   10. HERO CARDÁPIO
+   ========================================================================== */
 .hero-container-cardapio {
     text-align: center;
     padding: 40px 20px;
@@ -743,26 +313,21 @@ nav ul li a:hover {
 .hero-container-cardapio h1 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #FFF8E7;
-    margin-bottom: 15px;        
+    color: #fff8e7;
+    margin-bottom: 15px;
 }
-
 
 .hero-container-cardapio p {
     font-size: 1.2rem;
-    color: #D2B48C;
-    margin: 0;
+    color: #d2b48c;
 }
 
-
-
-
 /* ==========================================================================
-   7. REGRAS PARA TELAS MAIORES (DESKTOP E TABLETS)
+   11. RESPONSIVIDADE
    ========================================================================== */
 @media (min-width: 768px) {
     .hero-title {
-        font-size: 4.5rem; /* Fica grande e imponente em telas maiores */
+        font-size: 4.5rem;
     }
 
     .hero-text {
