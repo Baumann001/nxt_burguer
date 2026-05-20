@@ -699,9 +699,7 @@ nav ul li a:hover {
     transform: scale(1.08);
 }
 
-/* ==========================================================================
-   6. BOTÕES AUXILIARES E LINKS
-   ========================================================================== */
+/*estlização cardapio */
 .btn-cardapio {
     background: #721817;
     color: #f5f5dc;
@@ -744,6 +742,28 @@ nav ul li a:hover {
     background-color: #8b2524;
     color: #c4a57b;
 }
+
+.hero-container-cardapio {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-container-cardapio h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFF8E7;
+    margin-bottom: 15px;        
+}
+
+
+.hero-container-cardapio p {
+    font-size: 1.2rem;
+    color: #D2B48C;
+    margin: 0;
+}
+
+
+
 
 /* ==========================================================================
    7. REGRAS PARA TELAS MAIORES (DESKTOP E TABLETS)
