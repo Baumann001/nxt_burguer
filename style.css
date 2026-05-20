@@ -11,7 +11,7 @@ html,
 body {
     width: 100%;
     max-width: 100%;
-    background-color: white;
+    background-color: rgb(251, 253, 215);
     
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
@@ -133,7 +133,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     text-align: center;
-    color: #f5f5dc;
+    color:black;
     font-size: 1.8rem;
     font-weight: bold;
     margin: 30px 0 10px;
