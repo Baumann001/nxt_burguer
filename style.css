@@ -18,6 +18,16 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+#interacao-logo{
+
+}
+
+#interacao-logo img:hover{
+    transform: scale(1.0);
+}
+
+
+
 #texto-central {
     display: flex;
     justify-content: center;
