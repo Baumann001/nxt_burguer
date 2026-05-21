@@ -18,15 +18,30 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-#interacao-logo{
-
+/* Seleciona a imagem que está dentro do container do logo */
+#interacao-logo img {
+  /* Define o tempo da transição para o zoom e o brilho ficarem suaves */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  margin-top: -100px;
 }
 
-#interacao-logo img:hover{
-    transform: scale(1.0);
+/* Aplica os efeitos quando o usuário passa o mouse na imagem */
+#interacao-logo img:hover {
+  /* Dá o zoom de 10% */
+  transform: scale(1.1);
+  
+  /* Cria o brilho amarelo contornando o formato do logo */
+  filter: drop-shadow(0 0 15px #FFD700);
 }
 
+#carrinho{
 
+svg {
+
+width: 150px;    /* Aumenta a largura */
+  height: 150px;
+}
 
 #texto-central {
     display: flex;
