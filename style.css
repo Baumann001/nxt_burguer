@@ -37,11 +37,6 @@ body {
 
 #carrinho{
 
-svg {
-
-width: 150px;    /* Aumenta a largura */
-  height: 150px;
-}
 
 #texto-central {
     display: flex;
