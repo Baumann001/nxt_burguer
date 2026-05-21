@@ -1,22 +1,43 @@
-body{
-background-color: #3a2920;
-color: aliceblue;
-font-family: Arial, Helvetica, sans-serif;
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESETS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-#texto-central{
-justify-content: center;
-display: flex;
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    background-color: rgb(20, 10, 6);
+    
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
 }
+
+#texto-central {
+    display: flex;
+    justify-content: center;
+}
+
+#coloracao {
+    color: #c4a57b;
+}
+
+/* ==========================================================================
+   2. NAVEGAÇÃO (HEADER)
+   ========================================================================== */
 nav {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
 }
 
 nav ul {
@@ -27,12 +48,10 @@ nav ul {
 
 nav ul li {
     margin-left: 1.5rem;
-    justify-content: center;
 }
 
-
 nav ul li a {
-    color: #C0C0C0; /* Silver */
+    color: #c0c0c0;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -40,13 +59,13 @@ nav ul li a {
 }
 
 nav ul li a::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -5px;
     left: 0;
     width: 0;
     height: 2px;
-    background: #c9c500; /* Mercedes red underline */
+    background: #c9c500;
     transition: width 0.3s ease;
 }
 
@@ -55,108 +74,258 @@ nav ul li a:hover::before {
 }
 
 nav ul li a:hover {
-    color: #ebb812; /* Mercedes red */
+    color: #ebb812;
     text-shadow: 0 0 10px #ebb812;
 }
 
-#coloracao{
- color:#c4a57b;
-}
-
-
-.btn-cardapio {
-    background: #721817;
-    color: #f5f5dc;
-
-    padding: 16px 32px;
-
-    border: none;
-    border-radius: 10px;
-
-    font-weight: 600;
-    font-size: 16px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.btn-cardapio:hover {
-    background: #8b2524;
-}
-
-
-.adorar-title{
-justify-content: center;
-display: flex;
-}
-
+/* ==========================================================================
+   3. HERO
+   ========================================================================== */
 .hero {
-    min-height: 50vh;
-
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
-    padding: 20px;
+    padding: 40px 20px;
+    width: 100%;
 }
 
-/* CONTAINER */
-
 .hero-container {
+    width: 100%;
     max-width: 800px;
 }
 
-/* TÍTULO */
-
 .hero-title {
-    color: #f5f5dc;
-
-    font-size: 3rem;
+    color: #000000;
+    font-size: 2.2rem;
     font-weight: bold;
-
     margin-bottom: 20px;
+    word-wrap: break-word;
 }
-
-/* SUBTÍTULO */
 
 .hero-text {
-    color: #c4a57b;
-
-    font-size: 1.2rem;
-
+    color: #d37f08;
+    font-size: 1.1rem;
     margin-bottom: 35px;
+    line-height: 1.4;
 }
 
-/* BOTÃO */
-
-.hero-button {
+.hero-button,
+.btn-cardapio {
     background-color: #721817;
     color: #f5f5dc;
-
     border: none;
     border-radius: 10px;
-
     padding: 16px 32px;
-
     font-size: 1rem;
     font-weight: 600;
-
     cursor: pointer;
-
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 
-.hero-button:hover {
+.hero-button:hover,
+.btn-cardapio:hover {
     background-color: #8b2524;
 }
 
-/* RESPONSIVO */
+.adorar-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color:black;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 30px 0 10px;
+}
 
+/* ==========================================================================
+   4. GRID DE PRODUTOS
+   ========================================================================== */
+.products-grid,
+.principal-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 30px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.principal-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   5. CARDS
+   ========================================================================== */
+.product-card,
+.principal-card {
+    background: #2b180d;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.product-card {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+.principal-card {
+    width: 300px;
+    max-width: 100%;
+    border: 1px solid #4a2b16;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   6. IMAGENS DOS CARDS
+   ========================================================================== */
+.product-image,
+.principal-image {
+    width: 100%;
+    height: 180px;
+    background: #3d2817;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img,
+.principal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover img,
+.principal-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   7. INFORMAÇÕES DOS CARDS
+   ========================================================================== */
+.product-info,
+.principal-info {
+    padding: 16px;
+}
+
+.product-info h3,
+.principal-info h3 {
+    color: #f5f5dc;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-info p,
+.principal-info p {
+    color: #c79b63;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+/* ==========================================================================
+   8. FOOTER DOS CARDS
+   ========================================================================== */
+.product-footer,
+.principal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-footer span,
+.principal-footer span {
+    color: #d62828;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-footer button,
+.principal-footer button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 12px;
+    background: #8b1e12;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.product-footer button:hover,
+.principal-footer button:hover {
+    transform: scale(1.08);
+}
+
+/* ==========================================================================
+   9. LINKS E BOTÕES AUXILIARES
+   ========================================================================== */
+.topo {
+    color: #f5f5dc;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.topo a:hover {
+    color: #c4a57b;
+}
+
+.btn-voltar {
+    color: #f5f5dc;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #721817;
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #8b2524;
+    color: #c4a57b;
+}
+
+/* ==========================================================================
+   10. HERO CARDÁPIO
+   ========================================================================== */
+.hero-container-cardapio {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-container-cardapio h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff8e7;
+    margin-bottom: 15px;
+}
+
+.hero-container-cardapio p {
+    font-size: 1.2rem;
+    color: #d2b48c;
+}
+
+/* ==========================================================================
+   11. RESPONSIVIDADE
+   ========================================================================== */
 @media (min-width: 768px) {
-
     .hero-title {
         font-size: 4.5rem;
     }
@@ -165,12 +334,10 @@ display: flex;
         font-size: 1.5rem;
     }
 
-  
-
-
     .adorar-title {
-        font-size: 4.5rem;
+        font-size: 2.8rem;
     }
+<<<<<<< HEAD
 
     .adorar-title{
         font-size: 1.5rem;
@@ -348,3 +515,6 @@ display: flex;
    background-color: #8b2524;
   color: #c4a57b;
 }
+=======
+}
+>>>>>>> f2e4055cc26d0119752cbc096bc2b13307ac8718
