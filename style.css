@@ -35,9 +35,17 @@ body {
   filter: drop-shadow(0 0 15px #FFD700);
 }
 
-#carrinho{
+.carrinho-mutante {
+    color: #FF0000; /* Vermelho vivo */
+    transition: color 0.2s ease; /* Deixa a mudança de cor suave */
+  }
 
-}
+  /* Estilo quando passa o mouse (Vermelho Escuro) */
+  .carrinho-mutante:hover {
+    color: #8B0000; /* Vermelho escuro / DarkRed */
+    cursor: pointer; /* Transforma a seta do mouse na mãozinha de clique */
+  }
+
 #texto-central {
     display: flex;
     justify-content: center;
