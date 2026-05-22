@@ -300,35 +300,7 @@ nav ul li a:hover {
 }
 
 /* ==========================================================================
-   9. LINKS E BOTÕES AUXILIARES
-   ========================================================================== */
-.topo {
-    color: #f5f5dc;
-    text-decoration: none;
-    font-size: 15px;
-}
 
-.topo a:hover {
-    color: #c4a57b;
-}
-
-.btn-voltar {
-    color: #f5f5dc;
-    text-decoration: none;
-    font-size: 16px;
-    background-color: #721817;
-    padding: 8px 16px;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.3s;
-}
-
-.btn-voltar:hover {
-    background-color: #8b2524;
-    color: #c4a57b;
-}
 
 /* ==========================================================================
    10. HERO CARDÁPIO
