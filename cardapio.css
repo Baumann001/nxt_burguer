@@ -66,10 +66,9 @@ nav ul li a:hover {
 }
 
 
+/* Div principal dos lanches */
 
-
-.products-grid,
-.principal-grid {
+.products-grid-cardapio {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -77,19 +76,19 @@ nav ul li a:hover {
     gap: 30px;
 }
 
-.products-grid {
+.products-grid-cardapio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.principal-grid {
+.principal-grid-cardapio {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 
-.product-card {
+.product-card-cardapio {
     width: 100%;
     max-width: 280px;
     margin: 0 auto;
@@ -97,8 +96,7 @@ nav ul li a:hover {
 }
 
 
-.product-card,
-.principal-card {
+.product-card-cardapio {
     background: #2b180d;
     border-radius: 18px;
     overflow: hidden;
@@ -106,8 +104,7 @@ nav ul li a:hover {
 
 
 
-.product-image,
-.principal-image {
+.product-image-cardapio {
     width: 100%;
     height: 180px;
     background: #3d2817;
@@ -117,35 +114,32 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
-.product-image img,
-.principal-image img {
+.product-image-cardapio img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.product-image:hover img,
-.principal-image:hover img {
+.product-image-cardapio:hover img {
     transform: scale(1.05);
 }
 
 
 
-.product-info,
-.principal-info {
+
+.principal-info-cardapio {
     padding: 16px;
 }
 
-.product-info h3,
-.principal-info h3 {
+
+.principal-info-cardapio h3 {
     color: #f5f5dc;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.product-info p,
-.principal-info p {
+.principal-info-cardapio p {
     color: #c79b63;
     font-size: 14px;
     line-height: 1.5;
@@ -154,22 +148,21 @@ nav ul li a:hover {
 
 
 
-.product-footer,
-.principal-footer {
+
+.principal-footer-cardapio {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.product-footer span,
-.principal-footer span {
+.principal-footer-cardapio span {
     color: #d62828;
     font-size: 24px;
     font-weight: bold;
 }
 
-.product-footer button,
-.principal-footer button {
+
+.principal-footer-cardapio button {
     width: 42px;
     height: 42px;
     border: none;
@@ -181,8 +174,8 @@ nav ul li a:hover {
     transition: transform 0.3s;
 }
 
-.product-footer button:hover,
-.principal-footer button:hover {
+
+.principal-footer-cardapio button:hover {
     transform: scale(1.08);
 }
 
