@@ -46,6 +46,11 @@ body {
     cursor: pointer; /* Transforma a seta do mouse na mãozinha de clique */
   }
 
+#container-icones{
+display: flex;
+align-items: center;
+gap: 16px;
+}
 #texto-central {
     display: flex;
     justify-content: center;
@@ -382,7 +387,7 @@ nav ul li a:hover {
 
 @media (min-width: 768px) {
     .hero-container-index img{
-        width:500px;
+        width:400px;
     }
 
    
