@@ -23,7 +23,7 @@ body {
   /* Define o tempo da transição para o zoom e o brilho ficarem suaves */
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
-  margin-top: -100px;
+  margin-top: -50px;
 }
 
 /* Aplica os efeitos quando o usuário passa o mouse na imagem */
@@ -36,13 +36,13 @@ body {
 }
 
 .carrinho-mutante {
-    color: #FF0000; /* Vermelho vivo */
+    color: #f1c916; /* Vermelho vivo */
     transition: color 0.2s ease; /* Deixa a mudança de cor suave */
   }
 
   /* Estilo quando passa o mouse (Vermelho Escuro) */
   .carrinho-mutante:hover {
-    color: #8B0000; /* Vermelho escuro / DarkRed */
+    color: #9b790b; /* Vermelho escuro / DarkRed */
     cursor: pointer; /* Transforma a seta do mouse na mãozinha de clique */
   }
 
