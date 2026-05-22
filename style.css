@@ -368,7 +368,6 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
     width: 100%;
 }
 
@@ -378,9 +377,11 @@ nav ul li a:hover {
 }
 /* Seleciona a imagem que está dentro do container do hero */
 .hero-container-index img {
-  width: 180px;      /* Ajuste esse valor (ex: 150px, 180px, 200px) até o tamanho ficar bom */
+  width: 400px;   
+     /* Ajuste esse valor (ex: 150px, 180px, 200px) até o tamanho ficar bom */
   height: auto;      /* Garante que a altura diminua proporcionalmente sem distorcer o logo */
   object-fit: contain; 
+  padding-right: 10px;
 }
 
 .hero-title-index {
@@ -395,5 +396,14 @@ nav ul li a:hover {
     color: #d37f08;
     font-size: 1.1rem;
     margin-bottom: 35px;
-    line-height: 1.4;
+    line-height: 1.2;
+}
+
+
+@media (min-width: 768px) {
+    .hero-container-index img{
+        width:500px;
+    }
+
+   
 }
