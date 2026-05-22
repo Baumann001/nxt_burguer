@@ -376,6 +376,12 @@ nav ul li a:hover {
     width: 100%;
     max-width: 800px;
 }
+/* Seleciona a imagem que está dentro do container do hero */
+.hero-container-index img {
+  width: 180px;      /* Ajuste esse valor (ex: 150px, 180px, 200px) até o tamanho ficar bom */
+  height: auto;      /* Garante que a altura diminua proporcionalmente sem distorcer o logo */
+  object-fit: contain; 
+}
 
 .hero-title-index {
     color: #000000;
