@@ -1,0 +1,247 @@
+/* Configuração geral da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*configurações do body da pagina HTML */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    background-color: rgb(22, 11, 4);
+    
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+/* barra de navegação*/
+nav {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Lista de links da nav em linha */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+/* Espaçamento entre os itens da nav */
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+/* Estilo dos links da nav */
+nav ul li a {
+    color: #c0c0c0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Linha animada que aparece abaixo do link no hover */
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #c9c500;
+    transition: width 0.3s ease;
+}
+
+/* Expande a linha ao passar o mouse */
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+/* Cor e brilho do link no hover */
+nav ul li a:hover {
+    color: #ebb812;
+    text-shadow: 0 0 10px #ebb812;
+}
+
+
+/* Grid dos produtos*/
+.products-grid-sobremesa {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 30px;
+}
+
+/* Colunas automáticas que se adaptam ao tamanho da tela */
+.products-grid-sobremesa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Flex container alternativo (não está sendo usado ativamente) */
+.principal-grid-sobremesa {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* card dos produtos */
+.product-card-sobremesa {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+/* Fundo escuro e bordas arredondadas do card */
+.product-card-sobremesa {
+    background: #2b180d;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+
+/* imagem do produto */
+.product-image-sobremesa {
+    width: 100%;
+    height: 180px;
+    background: #3d2817;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Imagem ocupa todo o espaço do container */
+.product-image-sobremesa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom na imagem ao passar o mouse */
+.product-image-sobremesa:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Informações do produto */
+.principal-info-sobremesa {
+    padding: 16px;
+}
+
+/* Título do produto */
+.principal-info-sobremesa h3 {
+    color: #f5f5dc;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Descrição dos ingredientes */
+.principal-info-sobremesa p {
+    color: #c79b63;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+
+/* Fotter do card*/
+.principal-footer-sobremesa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Preço do produto em destaque */
+.principal-footer-sobremesa span {
+    color: #d62828;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Botão de adicionar ao carrinho */
+.principal-footer-sobremesa button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 12px;
+    background: #8b1e12;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* Aumentar o botão com hover */
+.principal-footer-sobremesa button:hover {
+    transform: scale(1.08);
+}
+
+
+/* Topo do header da página */
+.topo-sobremesa {
+    color: #f5f5dc;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Cor do link ao passar o mouse */
+.topo-sobremesa a:hover {
+    color: #c4a57b;
+}
+
+/* Botão "← Voltar" estilizado como pílula */
+.btn-voltar-sobremesa {
+    color: #f5f5dc;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #721817;
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+/* Hover do botão voltar */
+.btn-voltar-sobremesa:hover {
+    background-color: #8b2524;
+    color: #c4a57b;
+}
+
+
+/*hero container da página de sobremesas, centralizado e com padding */
+.hero-container-sobremesa {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Título principal da página */
+.hero-container-sobremesa h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff8e7;
+    margin-bottom: 15px;
+}
+
+/* Subtítulo descritivo */
+.hero-container-sobremesa p {
+    font-size: 1.2rem;
+    color: #d2b48c;
+}
