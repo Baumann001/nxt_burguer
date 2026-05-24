@@ -286,3 +286,35 @@ nav ul li a:hover {
     color: #d2b48c;
 }
 
+
+.footer{
+    background-color: #1d1106; /* marrom */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 5px solid #c0392b; /* vermelho */
+}
+
+.footer-container{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.logo{
+    color: #d4a017; /* amarelo mostarda */
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.footer-info p{
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.direitos{
+    margin-top: 20px;
+    font-size: 14px;
+    color: #cccccc;
+}
+
