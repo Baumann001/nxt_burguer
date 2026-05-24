@@ -90,7 +90,6 @@ nav ul li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-/* Flex container alternativo (não está sendo usado ativamente) */
 .principal-grid-sobremesa {
     display: flex;
     justify-content: center;
@@ -244,4 +243,36 @@ nav ul li a:hover {
 .hero-container-sobremesa p {
     font-size: 1.2rem;
     color: #d2b48c;
+}
+
+/*Footer da página*/
+.footer{
+    background-color: #1f130c; 
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 5px solid #c0392b; 
+}
+
+.footer-container{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.logo{
+    color: #d4a017; 
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.footer-info p{
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.direitos{
+    margin-top: 20px;
+    font-size: 14px;
+    color: #cccccc;
 }
