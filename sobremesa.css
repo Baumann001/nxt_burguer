@@ -90,7 +90,6 @@ nav ul li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-/* Flex container alternativo (não está sendo usado ativamente) */
 .principal-grid-sobremesa {
     display: flex;
     justify-content: center;
