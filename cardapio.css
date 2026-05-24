@@ -237,6 +237,49 @@ nav ul li a:hover {
     transform: scale(1.08);
 }
 
+/* ================================
+   SEPARADORES DE PRODUTOS
+   Separador de tipo de produto 
+   em uma mesma página
+   ================================ */
+
+.separador {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    grid-column: 1 / -1; /* esse comando faz o grid ignorar o nosso separador */
+    
+    font-size: 2.5rem;
+    color: #fff8e7;
+    margin-bottom: 15px;
+}
+
+/* Cria a linha da esquerda e da direita usando pseudo-elementos */
+.separador::before,
+.separador::after {
+    content: "";
+    flex: 1;
+    height: 2px; 
+    background: #c08e2b;
+}
+
+/* Espaço entre a linha da esquerda e o texto */
+.separador::before {
+    margin-right: 20px;
+}
+
+/* Espaço entre o texto e a linha da direita */
+.separador::after {
+    margin-left: 20px;
+}
 
 /* ================================
    TOPO DO HEADER (BOTÃO VOLTAR)
