@@ -418,10 +418,10 @@ nav ul li a:hover {
 }
 
 
-@media (width:375px) {
-  #interacao-logo img{
-margin-right: -50px;
-}
+@media (min-width: 360px) and (max-width: 500px) {
+  #interacao-logo img {
+    margin-right: -50px;
+  }
 }
 
     
