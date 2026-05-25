@@ -24,6 +24,7 @@ body {
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
   margin-top: -50px;
+  margin-left: -35px;
 }
 
 /* Aplica os efeitos quando o usuário passa o mouse na imagem */
@@ -409,6 +410,10 @@ nav ul li a:hover {
    }
    #container-icones{
     margin-top: -40px;
+   }
+
+   #interacao-logo img{
+    margin-right: -50px;
    }
 }
 
