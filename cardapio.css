@@ -10,11 +10,7 @@
 }
 
 
-/* ================================
-   CONFIGURAÇÕES BASE DO BODY/HTML
-   Fundo escuro, fonte padrão e
-   prevenção de scroll horizontal
-   ================================ */
+
 html,
 body {
     height: 100%;
@@ -32,11 +28,11 @@ body {
 }
 
 
-/* ================================
+/* 
    BARRA DE NAVEGAÇÃO (NAV)
    Centralizada, com espaçamento
    e alinhamento entre os itens
-   ================================ */
+    */
 nav {
     width: 95%; 
     max-width: 1400px; /* Aumentamos o limite para ela abrir mais */
@@ -102,11 +98,11 @@ nav ul li a:hover {
 }
 
 
-/* ================================
+/*
    GRID PRINCIPAL DOS PRODUTOS
    Centralizado, com gap entre os
    cards e colunas responsivas
-   ================================ */
+   */
 .products-grid-cardapio {
     width: 100%;
     max-width: 1200px;
@@ -122,7 +118,7 @@ nav ul li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-/* Flex container alternativo (não está sendo usado ativamente) */
+/* Flex container alternativo não está sendo usado ativamente */
 .principal-grid-cardapio {
     display: flex;
     justify-content: center;
@@ -130,11 +126,11 @@ nav ul li a:hover {
 }
 
 
-/* ================================
+/* 
    CARD INDIVIDUAL DE PRODUTO
    Largura máxima, centralizado
    e com borda sutil
-   ================================ */
+    */
 .product-card-cardapio {
     width: 100%;
     max-width: 280px;
@@ -155,11 +151,11 @@ nav ul li a:hover {
 }
 
 
-/* ================================
+/* 
    ÁREA DA IMAGEM DO PRODUTO
    Altura fixa com imagem coberta
    e efeito de zoom no hover
-   ================================ */
+    */
 .product-image-cardapio {
     width: 100%;
     height: 180px;
@@ -184,11 +180,11 @@ nav ul li a:hover {
 }
 
 
-/* ================================
+/* 
    INFORMAÇÕES DO PRODUTO (NOME E DESCRIÇÃO)
    Padding interno, cores e
    espaçamento entre título e texto
-   ================================ */
+  */
 .principal-info-cardapio {
     padding: 16px;
     flex-grow: 1; 
@@ -210,11 +206,11 @@ nav ul li a:hover {
 }
 
 
-/* ================================
+/* 
    RODAPÉ DO CARD (PREÇO + BOTÃO)
    Flex com preço à esquerda e
    botão de adicionar à direita
-   ================================ */
+    */
 .principal-footer-cardapio {
     display: flex;
     align-items: center;
@@ -249,11 +245,11 @@ nav ul li a:hover {
     transform: scale(1.08);
 }
 
-/* ================================
+/* 
    SEPARADORES DE PRODUTOS
    Separador de tipo de produto 
    em uma mesma página
-   ================================ */
+   */
 
 .separador {
     display: flex;
@@ -291,11 +287,11 @@ nav ul li a:hover {
     margin-left: 20px;
 }
 
-/* ================================
+/* 
    TOPO DO HEADER (BOTÃO VOLTAR)
    Estilo base do container e
    cor padrão do texto
-   ================================ */
+   */
 .topo {
     color: #f5f5dc;
     text-decoration: none;
@@ -328,11 +324,11 @@ nav ul li a:hover {
 }
 
 
-/* ================================
+/* 
    HERO / CABEÇALHO DA PÁGINA
    Título e subtítulo centralizados
    com cores e tamanhos destacados
-   ================================ */
+  */
 .hero-container-cardapio {
     text-align: center;
     padding: 40px 20px;
