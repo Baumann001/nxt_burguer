@@ -102,13 +102,13 @@ nav ul li a:hover {
 /* Colunas automáticas que se adaptam ao tamanho da tela */
 .products-grid-sobremesa {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /*nunca fiquem esmagados (menores que 220px)*/
 }
 
 .principal-grid-sobremesa {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*controlar a quebra de linha dos elementos filhos dentro de um container flexível.*/
 }
 
 
