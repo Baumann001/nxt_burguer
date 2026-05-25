@@ -25,12 +25,15 @@ body {
 
 /* barra de navegação*/
 nav {
-    width: 90%;
-    max-width: 1100px;
+    width: 95%; 
+    max-width: 1400px; /* Aumentamos o limite para ela abrir mais */
     margin: 0 auto;
+    
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; 
+    
+    /* 2. ISSO CORRIGE O DESALINHAMENTO: Alinha verticalmente a logo e os textos pelo centro */
+    align-items: center; 
     padding: 20px 0;
 }
 
@@ -38,7 +41,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    align-items: center;    
 }
 
 /* Espaçamento entre os itens da nav */
@@ -65,6 +68,13 @@ nav ul li a::before {
     height: 2px;
     background: #c9c500;
     transition: width 0.3s ease;
+}
+
+.logo-nav {
+    height: 90px; /* Define uma altura boa para não estourar o cabeçalho */
+    width: auto;
+    object-fit: contain;
+    display: block; /* Remove espaços fantasmas que o navegador cria em imagens */
 }
 
 /* Expande a linha ao passar o mouse */
