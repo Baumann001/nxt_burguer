@@ -1,8 +1,4 @@
-/* ================================
-   RESET GERAL
-   Zera margens, paddings e define
-   box-sizing para todos os elementos
-   ================================ */
+/* Configuração geral da página */
 * {
     margin: 0;
     padding: 0;
@@ -10,15 +6,10 @@
 }
 
 
-/* ================================
-   CONFIGURAÇÕES BASE DO BODY/HTML
-   Fundo escuro, fonte padrão e
-   prevenção de scroll horizontal
-   ================================ */
+/*configurações do body da pagina HTML */
 html,
 body {
     height: 100%;
-    margin: 0;
     width: 100%;
     max-width: 100%;
     background-color: rgb(22, 11, 4);
@@ -32,11 +23,7 @@ body {
 }
 
 
-/* ================================
-   BARRA DE NAVEGAÇÃO (NAV)
-   Centralizada, com espaçamento
-   e alinhamento entre os itens
-   ================================ */
+/* barra de navegação*/
 nav {
     width: 95%; 
     max-width: 1400px; /* Aumentamos o limite para ela abrir mais */
@@ -102,12 +89,8 @@ nav ul li a:hover {
 }
 
 
-/* ================================
-   GRID PRINCIPAL DOS PRODUTOS
-   Centralizado, com gap entre os
-   cards e colunas responsivas
-   ================================ */
-.products-grid-cardapio {
+/* Grid dos produtos*/
+.products-grid-sobremesa {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -117,25 +100,20 @@ nav ul li a:hover {
 }
 
 /* Colunas automáticas que se adaptam ao tamanho da tela */
-.products-grid-cardapio {
+.products-grid-sobremesa {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-/* Flex container alternativo (não está sendo usado ativamente) */
-.principal-grid-cardapio {
+.principal-grid-sobremesa {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 
-/* ================================
-   CARD INDIVIDUAL DE PRODUTO
-   Largura máxima, centralizado
-   e com borda sutil
-   ================================ */
-.product-card-cardapio {
+/* card dos produtos */
+.product-card-sobremesa {
     width: 100%;
     max-width: 280px;
     margin: 0 auto;
@@ -143,24 +121,19 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     height: 100%;
-    
-    
+    justify-content: space-between
 }
 
 /* Fundo escuro e bordas arredondadas do card */
-.product-card-cardapio {
+.product-card-sobremesa {
     background: #2b180d;
     border-radius: 18px;
     overflow: hidden;
 }
 
 
-/* ================================
-   ÁREA DA IMAGEM DO PRODUTO
-   Altura fixa com imagem coberta
-   e efeito de zoom no hover
-   ================================ */
-.product-image-cardapio {
+/* imagem do produto */
+.product-image-sobremesa {
     width: 100%;
     height: 180px;
     background: #3d2817;
@@ -171,38 +144,34 @@ nav ul li a:hover {
 }
 
 /* Imagem ocupa todo o espaço do container */
-.product-image-cardapio img {
+.product-image-sobremesa img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-/* Zoom suave na imagem ao passar o mouse */
-.product-image-cardapio:hover img {
+/* Zoom na imagem ao passar o mouse */
+.product-image-sobremesa:hover img {
     transform: scale(1.05);
 }
 
 
-/* ================================
-   INFORMAÇÕES DO PRODUTO (NOME E DESCRIÇÃO)
-   Padding interno, cores e
-   espaçamento entre título e texto
-   ================================ */
-.principal-info-cardapio {
+/* Informações do produto */
+.principal-info-sobremesa {
     padding: 16px;
-    flex-grow: 1; 
+    flex-grow: 1
 }
 
 /* Título do produto */
-.principal-info-cardapio h3 {
+.principal-info-sobremesa h3 {
     color: #f5f5dc;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
 /* Descrição dos ingredientes */
-.principal-info-cardapio p {
+.principal-info-sobremesa p {
     color: #c79b63;
     font-size: 14px;
     line-height: 1.5;
@@ -210,12 +179,8 @@ nav ul li a:hover {
 }
 
 
-/* ================================
-   RODAPÉ DO CARD (PREÇO + BOTÃO)
-   Flex com preço à esquerda e
-   botão de adicionar à direita
-   ================================ */
-.principal-footer-cardapio {
+/* Fotter do card*/
+.principal-footer-sobremesa {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -223,15 +188,14 @@ nav ul li a:hover {
 }
 
 /* Preço do produto em destaque */
-.principal-footer-cardapio span {
+.principal-footer-sobremesa span {
     color: #d62828;
     font-size: 24px;
     font-weight: bold;
-
 }
 
 /* Botão de adicionar ao carrinho */
-.principal-footer-cardapio button {
+.principal-footer-sobremesa button {
     width: 42px;
     height: 42px;
     border: none;
@@ -241,74 +205,28 @@ nav ul li a:hover {
     font-size: 24px;
     cursor: pointer;
     transition: transform 0.3s;
-
 }
 
-/* Leve crescimento do botão no hover */
-.principal-footer-cardapio button:hover {
+/* Aumentar o botão com hover */
+.principal-footer-sobremesa button:hover {
     transform: scale(1.08);
 }
 
-/* ================================
-   SEPARADORES DE PRODUTOS
-   Separador de tipo de produto 
-   em uma mesma página
-   ================================ */
 
-.separador {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    
-    font-weight: bold;
-    grid-column: 1 / -1; /* esse comando faz o grid ignorar o nosso separador */
-    
-    font-size: 2rem;
-    color: #fff8e7;
-    margin-bottom: 15px;
-}
-
-/* Cria a linha da esquerda e da direita usando pseudo-elementos */
-.separador::before,
-.separador::after {
-    content: "";
-    flex: 1;
-    height: 2px; 
-    background: #c08e2b;
-}
-
-/* Espaço entre a linha da esquerda e o texto */
-.separador::before {
-    margin-right: 20px;
-}
-
-/* Espaço entre o texto e a linha da direita */
-.separador::after {
-    margin-left: 20px;
-}
-
-/* ================================
-   TOPO DO HEADER (BOTÃO VOLTAR)
-   Estilo base do container e
-   cor padrão do texto
-   ================================ */
-.topo {
+/* Topo do header da página */
+.topo-sobremesa {
     color: #f5f5dc;
     text-decoration: none;
     font-size: 15px;
 }
 
 /* Cor do link ao passar o mouse */
-.topo a:hover {
+.topo-sobremesa a:hover {
     color: #c4a57b;
 }
 
 /* Botão "← Voltar" estilizado como pílula */
-.btn-voltar {
+.btn-voltar-sobremesa {
     color: #f5f5dc;
     text-decoration: none;
     font-size: 16px;
@@ -322,24 +240,20 @@ nav ul li a:hover {
 }
 
 /* Hover do botão voltar */
-.btn-voltar:hover {
+.btn-voltar-sobremesa:hover {
     background-color: #8b2524;
     color: #c4a57b;
 }
 
 
-/* ================================
-   HERO / CABEÇALHO DA PÁGINA
-   Título e subtítulo centralizados
-   com cores e tamanhos destacados
-   ================================ */
-.hero-container-cardapio {
+/*hero container da página de sobremesas, centralizado e com padding */
+.hero-container-sobremesa {
     text-align: center;
     padding: 40px 20px;
 }
 
 /* Título principal da página */
-.hero-container-cardapio h1 {
+.hero-container-sobremesa h1 {
     font-size: 2.5rem;
     font-weight: bold;
     color: #fff8e7;
@@ -347,20 +261,20 @@ nav ul li a:hover {
 }
 
 /* Subtítulo descritivo */
-.hero-container-cardapio p {
+.hero-container-sobremesa p {
     font-size: 1.2rem;
     color: #d2b48c;
 }
 
-
+/*Footer da página*/
 .footer{
-    background-color: #1d1106; /* marrom */
+    background-color: #1f130c; 
     color: white;
     padding: 30px 20px;
     text-align: center;
-    border-top: 5px solid #c0392b; /* vermelho */
+    margin-top: 50px;
+    border-top: 5px solid #c0392b; 
     margin-top: auto;
-    
 }
 
 .footer-container{
@@ -369,13 +283,12 @@ nav ul li a:hover {
 }
 
 .logo{
-    color: #d4a017; /* amarelo mostarda */
+    color: #d4a017; 
     font-size: 32px;
     margin-bottom: 15px;
 }
 
 .footer-info p{
-    
     margin: 8px 0;
     font-size: 16px;
 }
@@ -385,4 +298,3 @@ nav ul li a:hover {
     font-size: 14px;
     color: #cccccc;
 }
-

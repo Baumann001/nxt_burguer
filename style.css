@@ -32,7 +32,7 @@ body {
   transform: scale(1.1);
   
   /* Cria o brilho amarelo contornando o formato do logo */
-  filter: drop-shadow(0 0 15px #FFD700);
+  filter: drop-shadow(0 0 15px #683308);
 }
 
 .carrinho-mutante {
