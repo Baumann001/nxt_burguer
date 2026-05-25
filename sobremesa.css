@@ -9,6 +9,7 @@
 /*configurações do body da pagina HTML */
 html,
 body {
+    height: 100%;
     width: 100%;
     max-width: 100%;
     background-color: rgb(22, 11, 4);
@@ -16,6 +17,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
+
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -82,6 +86,7 @@ nav ul li a:hover {
     margin: 0 auto;
     padding: 20px;
     gap: 30px;
+    margin-bottom: 60px
 }
 
 /* Colunas automáticas que se adaptam ao tamanho da tela */
@@ -103,6 +108,10 @@ nav ul li a:hover {
     max-width: 280px;
     margin: 0 auto;
     border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between
 }
 
 /* Fundo escuro e bordas arredondadas do card */
@@ -141,6 +150,7 @@ nav ul li a:hover {
 /* Informações do produto */
 .principal-info-sobremesa {
     padding: 16px;
+    flex-grow: 1
 }
 
 /* Título do produto */
@@ -164,6 +174,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
 }
 
 /* Preço do produto em destaque */
@@ -253,6 +264,7 @@ nav ul li a:hover {
     text-align: center;
     margin-top: 50px;
     border-top: 5px solid #c0392b; 
+    margin-top: auto;
 }
 
 .footer-container{
