@@ -1,0 +1,64 @@
+body {
+  background-color: #000000;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.formulario label[type="text"],
+.formulario label[type="email"],
+.formulario label[type="password"] {
+color: white;
+
+}
+
+.hero-container-index {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#interacao-logo img {
+  max-width: 180px;
+  height: auto;
+}
+
+.formulario {
+  width: 100%;
+  max-width: 450px;
+ 
+  margin-bottom: 5px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+ 
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.formulario input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.formulario button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.formulario button[type="submit"]:hover {
+  background-color: #218838;
+}
