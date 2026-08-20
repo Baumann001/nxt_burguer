@@ -2,9 +2,25 @@ body{
 background-color: black;
 }
 
+/* ====== LOGO ====== */
 
-.ajustarimg{
-justify-content: center;
-align-items: center;
+.logo-container {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+}
+
+
+.cadastro_funcionario{
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
 
 }
