@@ -51,46 +51,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastro Simples</title>
-  <link rel="stylesheet" href="style_php.css">
-</head>
-<body>
-<br>
-<br>
-<br>
-<br>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro Simples</title>
+        <link rel="stylesheet" href="style_php.css">
+    </head>
 
-<div class="ajustarimg">
-            <img src="logo.webp" alt="" srcset="">
-            </div>
+    <body>
+
+
+        <div class="logo-container">
+            <img src="logo.webp" alt="Logo da empresa" class=logo>
+        </div>
+        
+        <form action="cadastro.php" method="POST" class="formulario">
             
+
+                <h2>Cadastro de Funcionário</h2>
+
+                <label>Nome:</label><br>
+                <input type="text" name="nome" class="input-formulario" placeholder="Nome:"><br><br>
     
+                <label>E-mail:</label><br>
+                <input type="email" name="email" class="input-formulario" placeholder="Email:" required><br><br>
     
-
+                <label>CPF (apenas números):</label><br>
+                <input type="text" name="cpf" maxlength="11" class="input-formulario" placeholder="CPF:" required><br><br>
     
-
-
+                <label>Senha:</label><br>
+                <input type="password" name="senha" class="input-formulario" placeholder="Senha:" required><br><br>
     
-    <form action="cadastro.php" method="POST">
-        <label>Nome:</label><br>
-        <input type="text" name="nome" placeholder="Nome:"><br><br>
+                <label>Telefone:</label><br>
+                <input type="text" name="telefone" class="input-formulario" placeholder="Telefone:" required><br><br>
+    
+                <button type="submit">Cadastrar</button>
+    
+            
+        </form>
 
-        <label>E-mail:</label><br>
-        <input type="email" name="email" placeholder="Email:" required><br><br>
-
-        <label>CPF (apenas números):</label><br>
-        <input type="text" name="cpf" maxlength="11" placeholder="CPF:" required><br><br>
-
-        <label>Senha:</label><br>
-        <input type="password" name="senha" placeholder="Senha:" required><br><br>
-
-        <label>Telefone:</label><br>
-        <input type="text" name="telefone" placeholder="Telefone:" required><br><br>
-
-        <button type="submit">Cadastrar</button>
-    </form>
-
-</body>
+    </body>
 </html>
