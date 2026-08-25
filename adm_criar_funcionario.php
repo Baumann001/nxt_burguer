@@ -4,16 +4,20 @@ include "db.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Pega os dados enviados pelo formulário
-    $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
-    $senha = $_POST['senha'];
-    $telefone = $_POST['telefone'];
-    $idade = (int)$_POST['idade']; // Converte para inteiro por segurança
-    $cargo = $_POST['cargo'];
+    $nome = $_POST['nome'] ?? '';
+    $cpf = $_POST['cpf'] ?? '';
+    $senha = $_POST['senha'] ?? '';
+    $telefone = $_POST['telefone'] ?? '';
+    $idade = (int)($_POST['idade'] ?? 0); // Converte para inteiro por segurança
+    $cargo = $_POST['cargo'] ?? '';
+
+    if ($nome === '' || $cpf === '' || $senha === '' || $telefone === '' || $idade <= 0 || $cargo === '') {
+        echo "<p style='color: red;'>Preencha todos os campos obrigatórios.</p>";
+    } else {
 
     // 1. VERIFICAÇÃO DADOS DUPLICADOS (CPF ou Nome)
     // A ordem dos '?' deve ser rigorosamente a mesma do bind_param
-    $stmt_check = $conn->prepare("SELECT nome, cpf FROM usuarios WHERE cpf = ? OR nome = ?");
+    $stmt_check = $conn->prepare("SELECT nome, cpf FROM funcionario WHERE cpf = ? OR nome = ?");
     $stmt_check->bind_param("ss", $cpf, $nome); // 1º CPF, 2º Nome
     $stmt_check->execute();
     $resultado = $stmt_check->get_result();
@@ -31,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
         // 2. INSERÇÃO NO BANCO DE DADOS
-        $stmt_insert = $conn->prepare("INSERT INTO usuarios (nome, telefone, cargo, cpf, senha, idade) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt_insert = $conn->prepare("INSERT INTO funcionario (nome, telefone, cargo, cpf, senha, idade) VALUES (?, ?, ?, ?, ?, ?)");
         
         // "sssssi" -> 5 Strings (nome, telefone, cargo, cpf, senha) e 1 Inteiro (idade)
         $stmt_insert->bind_param("sssssi", $nome, $telefone, $cargo, $cpf, $senha_hash, $idade);
@@ -46,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     
     $stmt_check->close();
+    }
 }
 ?>
 
@@ -64,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <img src="logo.webp" alt="Logo da empresa" class=logo>
         </div>
         
-        <form action="cadastro.php" method="POST" class="formulario">
+        <form action="adm_criar_funcionario.php" method="POST" class="formulario">
             
 
                 <h2>Cadastro de Funcionário</h2>
@@ -72,8 +77,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label>Nome:</label><br>
                 <input type="text" name="nome" class="input-formulario" placeholder="Nome:"><br><br>
     
-                <label>E-mail:</label><br>
-                <input type="email" name="email" class="input-formulario" placeholder="Email:" required><br><br>
     
                 <label>CPF (apenas números):</label><br>
                 <input type="text" name="cpf" maxlength="11" class="input-formulario" placeholder="CPF:" required><br><br>
@@ -81,8 +84,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label>Senha:</label><br>
                 <input type="password" name="senha" class="input-formulario" placeholder="Senha:" required><br><br>
     
-                <label>Telefone:</label><br>
-                <input type="text" name="telefone" class="input-formulario" placeholder="Telefone:" required><br><br>
+                <label>Idade:</label><br>
+                <input type="text" name="idade" class="input-formulario" placeholder="idade:" required><br><br>
+
+                  <label>Telefone:</label><br>
+                <input type="text" name="telefone" class="input-formulario" placeholder="telefone:" required><br><br>
+
+               <label>Cargo:</label><br>
+                <select name="cargo" class="input-formulario" required>
+        <option value="">Selecione o cargo</option>
+        <option value="adm">adm</option>
+        <option value="usuario">usuario</option>
+        </select>
+        <br><br>
     
                 <button type="submit">Cadastrar</button>
     
